@@ -1,24 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   new_stack.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtroiano <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 17:24:00 by gtroiano          #+#    #+#             */
-/*   Updated: 2023/12/20 16:37:35 by gtroiano         ###   ########.fr       */
+/*   Created: 2023/12/20 17:42:26 by gtroiano          #+#    #+#             */
+/*   Updated: 2023/12/20 17:48:04 by gtroiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-typedef struct s_stack
+t_stack *new_stack(int numbers)
 {
-	long			number;
-	int				index;
-	struct s_stack	*prev;
-	struct s_stack	*next;
-} t_stack;
+	t_stack	*new;
 
-#endif
+	new = malloc(sizeof (t_stack));
+	if (!new)
+		exit_error();
+	new->number = numbers;
+	new->next = NULL;
+	return (new);
+}

@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   last_element_utils.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtroiano <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 17:24:00 by gtroiano          #+#    #+#             */
-/*   Updated: 2023/12/20 16:37:35 by gtroiano         ###   ########.fr       */
+/*   Created: 2023/12/20 17:37:31 by gtroiano          #+#    #+#             */
+/*   Updated: 2023/12/20 17:40:34 by gtroiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-typedef struct s_stack
+t_stack *last_element(t_stack *last)
 {
-	long			number;
-	int				index;
-	struct s_stack	*prev;
-	struct s_stack	*next;
-} t_stack;
+	if (!last)
+		return (NULL);
+	while (last->next)
+		last = last->next;
+	return (last);
+}
 
-#endif
+

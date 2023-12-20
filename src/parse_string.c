@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   parse_string.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtroiano <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 17:24:00 by gtroiano          #+#    #+#             */
-/*   Updated: 2023/12/20 16:37:35 by gtroiano         ###   ########.fr       */
+/*   Created: 2023/12/20 17:55:02 by gtroiano          #+#    #+#             */
+/*   Updated: 2023/12/20 18:04:29 by gtroiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-typedef struct s_stack
+void	free_string(char **s)
 {
-	long			number;
-	int				index;
-	struct s_stack	*prev;
-	struct s_stack	*next;
-} t_stack;
+	char	*n;
 
-#endif
+	if (!s)
+		return ;
+	while (*s)
+	{
+		n = *s;
+		s++;
+		free(n);
+	}
+	*s = NULL;
+}

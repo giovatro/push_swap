@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   back_node.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gtroiano <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/13 17:24:00 by gtroiano          #+#    #+#             */
-/*   Updated: 2023/12/20 16:37:35 by gtroiano         ###   ########.fr       */
+/*   Created: 2023/12/20 17:25:07 by gtroiano          #+#    #+#             */
+/*   Updated: 2023/12/20 17:36:45 by gtroiano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "push_swap.h"
 
-typedef struct s_stack
+void	back_node(t_stack **stack, t_stack *new_stack)
 {
-	long			number;
-	int				index;
-	struct s_stack	*prev;
-	struct s_stack	*next;
-} t_stack;
-
-#endif
+	if (!stack)
+		return ;
+	if (!*stack)
+		*stack = stack_new;
+	else 
+		(last_element(*stack))->next = new_stack;
+}
