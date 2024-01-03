@@ -12,35 +12,6 @@
 
 #include "../includes/push_swap.h"
 
-int	ft_atoi_custom(const char *str)
-{
-	int				mod;
-	long long int	i;
-
-	i = 0;
-	mod = 1;
-	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\f'
-		|| *str == '\v' || *str == '\r')
-		str++;
-	if (*str == '-')
-	{
-		mod = -1;
-		str++;
-	}
-	else if (*str == '+')
-		str++;
-	while (*str)
-	{
-		if (!ft_isdigit(*str))
-			exit_error();
-		i = i * 10 + (*str - 48);
-		str++;
-	}
-	if ((mod * i) > 2147483647 || (mod * i) < -2147483648)
-		exit_error();
-	return (mod * i);
-}
-
 int	ft_min(t_stack *a)
 {
 	int		i;
@@ -67,6 +38,35 @@ int	ft_max(t_stack *a)
 		a = a->next;
 	}
 	return (i);
+}
+
+int	ft_atoi(const char *str)
+{
+	int		sign;
+	long	value;
+
+	value = 0;
+	sign = 1;
+	while (*str == ' ' || *str == '\t' || *str == '\n' || *str == '\f'
+		|| *str == '\v' || *str == '\r')
+		str++;
+	if (*str == '-')
+	{
+		sign = -1;
+		str++;
+	}
+	else if (*str == '+')
+		str++;
+	while (*str)
+	{
+		if (!ft_isdigit(*str))
+			exit_error();
+		value = value * 10 + (*str - 48);
+		str++;
+	}
+	if ((sign * value) > 2147483647 || (sign * value) < -2147483648)
+		exit_error();
+	return (sign * value);
 }
 
 /* 

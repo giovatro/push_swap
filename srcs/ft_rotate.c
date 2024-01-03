@@ -24,7 +24,7 @@ void	ra(t_stack **a, int nbr)
 	*a = tmp->next;
 	tmp->next = NULL;
 	if (nbr == 0)
-		write(1, "ra\n", 1);
+		write(1, "ra\n", 3);
 }
 
 void	rb(t_stack **b, int nbr)
@@ -39,7 +39,7 @@ void	rb(t_stack **b, int nbr)
 	*b = tmp->next;
 	tmp->next = NULL;
 	if (nbr == 0)
-		write(1, "rb\n", 1);
+		write(1, "rb\n", 3);
 }
 
 void	rr(t_stack **a, t_stack **b, int nbr)
@@ -59,7 +59,7 @@ void	rr(t_stack **a, t_stack **b, int nbr)
 	*b = tmp->next;
 	tmp->next = NULL;
 	if (nbr == 0)
-		write(1, "rr\n", 1);
+		write(1, "rr\n", 3);
 }
 
 /*

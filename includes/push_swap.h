@@ -24,7 +24,6 @@ typedef struct s_stack
 {
 	long			number;
 	int				index;
-	struct s_stack	*prev;
 	struct s_stack	*next;
 } t_stack;
 
@@ -76,7 +75,7 @@ int			ft_case_rrarb(t_stack *a, t_stack *b, int c);
 int			ft_case_rarrb(t_stack *a, t_stack *b, int c);
 
 
-/* Rotations */
+/* Rotation types */
 
 int			ft_rotate_type_ab(t_stack *a, t_stack *b);
 int			ft_rotate_type_ba(t_stack *a, t_stack *b);
@@ -99,6 +98,6 @@ int			ft_find_place_a(t_stack *stack_a, int nbr_push);
 int			ft_find_place_b(t_stack *stack_b, int nbr_push);
 int			ft_min(t_stack *a);
 int			ft_max(t_stack *a);
-int			ft_atoi_custom(const char *str);
+int			ft_atoi(const char *str);
 
 #endif

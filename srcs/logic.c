@@ -24,7 +24,7 @@ t_stack	*split_string(char **argv)
 	temp = ft_split(argv[1], ' ');
 	while (temp[i])
 	{
-		nbr = ft_atoi_custom(temp[i]);
+		nbr = ft_atoi(temp[i]);
 		back_node(&stack_a, new_stack(nbr));
 		i++;
 	}
@@ -49,7 +49,7 @@ t_stack	*logic(int argc, char **argv)
 	{
 		while (i < argc)
 		{
-			nbr = ft_atoi_custom(argv[i]);
+			nbr = ft_atoi(argv[i]);
 			back_node(&stack_a, new_stack(nbr));
 			i++;
 		}
