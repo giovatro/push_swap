@@ -29,7 +29,6 @@ t_stack	*split_string(char **argv)
 		i++;
 	}
 	free_string(temp);
-	free(temp); //try to remove
 	return (stack_a);
 }
 
@@ -41,8 +40,6 @@ t_stack	*logic(int argc, char **argv)
 
 	i = 1;
 	stack_a = NULL;
-	if (argc < 2)
-		return (0);
 	if (2 == argc)
 	   stack_a = split_string(argv);
 	else
@@ -62,10 +59,9 @@ t_stack	*logic(int argc, char **argv)
 split_string works and sorts the stacks in case of they are passed in between quotation marks. 
 In this scenario, the function takes the string, and splits the numbers in order to create seperated integer number.
 
-logic does three things 
-- It checks if the number of input is less than two
+logic does two things 
 -  It checks if the number of input is equal to two
-	If it is, it means it is a quoted string. Call another function <spiit_string>
+	If it is, it means it is a quoted string. Call the spiit_string function
 - It checks if the number of input is greater than two.
 	If it is, it lists the arguements.
 

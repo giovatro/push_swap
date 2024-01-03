@@ -16,11 +16,9 @@ CC = gcc
 FLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
-LIBFT_DIR = libft/
-
-OBJ_DIR = obj/
-
 SRC_DIR = srcs/
+LIBFT_DIR = libft/
+OBJ_DIR = obj/
 
 SRC = srcs/back_node.c \
 		srcs/calculation_ab.c \
