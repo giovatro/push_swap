@@ -26,12 +26,11 @@ SRC = srcs/back_node.c \
 		srcs/check_dup.c \
 		srcs/check_is_sorted.c \
 		srcs/exit_error.c \
-		srcs/free.c \
+		srcs/fill_stack_values.c \
 		srcs/ft_push.c \
 		srcs/ft_reverse_rotate.c \
 		srcs/ft_rotate.c \
 		srcs/ft_swap.c \
-		srcs/logic.c \
 		srcs/main.c \
 		srcs/new_stack.c \
 		srcs/rotate_and_push.c \
@@ -39,7 +38,8 @@ SRC = srcs/back_node.c \
 		srcs/sort_three.c \
 		srcs/sort.c \
 		srcs/utils_find.c \
-		srcs/utils_last_element.c \
+		srcs/utils_free.c \
+		srcs/utils_stack.c \
 		srcs/utils.c \
 
 OBJ = ${SRC:.c=.o}
