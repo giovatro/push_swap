@@ -20,19 +20,18 @@ SRC_DIR = srcs/
 LIBFT_DIR = libft/
 OBJ_DIR = obj/
 
-SRC = srcs/back_node.c \
-		srcs/calculation_ab.c \
+SRC = srcs/calculation_ab.c \
 		srcs/calculation_ba.c \
 		srcs/check_dup.c \
 		srcs/check_is_sorted.c \
 		srcs/exit_error.c \
-		srcs/fill_stack_values.c \
+		srcs/fill_stack_with_values.c \
 		srcs/ft_push.c \
 		srcs/ft_reverse_rotate.c \
 		srcs/ft_rotate.c \
 		srcs/ft_swap.c \
 		srcs/main.c \
-		srcs/new_stack.c \
+		srcs/nodes.c \
 		srcs/rotate_and_push.c \
 		srcs/rotations.c \
 		srcs/sort_three.c \

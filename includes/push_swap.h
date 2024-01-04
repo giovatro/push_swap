@@ -29,10 +29,10 @@ typedef struct s_stack
 
 /* Initialization */
 
-t_stack		*fill_stack_values(int argc, char **argv);
+t_stack		*fill_stack_with_values(int argc, char **argv);
 t_stack		*split_string(char **argv);
-t_stack		*new_stack(int nbr);
-void		back_node(t_stack **stack, t_stack *new_stack);
+t_stack		*new_node(int nbr);
+void		add_node_from_back(t_stack **stack, t_stack *new_stack);
 int			check_dup(t_stack *a);
 int			check_is_sorted(t_stack *stack_a);
 
@@ -84,15 +84,15 @@ int			ft_apply_rarrb(t_stack **a, t_stack **b, int c, char s);
 
 /* Utils */
 
-t_stack		*last_element(t_stack *lst);
-int			stack_size(t_stack *lst);
+t_stack		*last_element(t_stack *stack);
+int			stack_size(t_stack *stack);
 int			ft_find_index(t_stack *a, int nbr);
 int			ft_find_place_a(t_stack *stack_a, int nbr_push);
 int			ft_find_place_b(t_stack *stack_b, int nbr_push);
 int			ft_min(t_stack *a);
 int			ft_max(t_stack *a);
 int			ft_atoi_custom(const char *str);
-void		free_stack(t_stack **lst);
+void		free_stack(t_stack **stack);
 void		free_string(char **s);
 
 /* Error */
